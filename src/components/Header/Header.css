@@ -1,0 +1,7 @@
+:root {
+  --color-text-main: azure;
+  --color-text-secondary: rgb(167, 184, 184);
+  --color-main-dark: rgb(19, 19, 19);
+  --color-main-dark-lighter: rgb(30, 30, 30);
+  --color-main-light: rgb(88, 83, 78);
+}

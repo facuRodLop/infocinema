@@ -1,0 +1,48 @@
+.movie-card-link {
+  text-decoration: none;
+}
+
+.movie-card {
+  min-width: 250px;
+  width: 25%;
+}
+
+.movie-card-header {
+  position: relative;
+}
+
+.movie-card-image {
+  width: 100%;
+}
+
+.movie-card-title {
+  color: azure;
+}
+
+.movie-card-body {
+  display: none;
+  background-color: var(--color-main-dark-lighter);
+  padding: 0.5rem 1rem;
+  color: azure;
+}
+
+.movie-card-text {
+  width: 215px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-card-release {
+  color: var(--color-text-secondary);
+}
+
+.movie-card:hover .movie-card-body {
+  display: block;
+}
+
+.movie-card:hover {
+  width: 30%;
+  border: 1px solid rgba(240, 255, 255, 0.5);
+  box-shadow: 0 0 6px 3px rgba(240, 255, 255, 0.5);
+}
