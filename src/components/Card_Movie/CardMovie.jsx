@@ -3,7 +3,7 @@ import "./CardMovie.css";
 
 function CardMovie({ movie }) {
   return (
-    <Link className="movie-card-link" to={`/movies/${movie.title}`}>
+    <Link className="movie-card-link" to={`/movies/${movie.id}`}>
       <div className="movie-card">
         <img
           src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}

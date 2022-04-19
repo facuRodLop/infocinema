@@ -5,6 +5,7 @@
 .movie-card {
   min-width: 250px;
   width: 25%;
+  transition: 0.3s;
 }
 
 .movie-card-header {
@@ -45,4 +46,6 @@
   width: 30%;
   border: 1px solid rgba(240, 255, 255, 0.5);
   box-shadow: 0 0 6px 3px rgba(240, 255, 255, 0.5);
+  transition: 0.3s;
+  /* position: fixed; */
 }

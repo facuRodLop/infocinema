@@ -47,7 +47,7 @@ function NavBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link className="navbar-link" href="/about-us">
-                About me
+                About this project
               </Nav.Link>
               <Nav.Link className="navbar-link" href="/contact">
                 Contact
