@@ -24,13 +24,13 @@ function Movies() {
   }, []);
   return (
     <div>
-      <Row>
+      <div className="movies-row">
         {movies.map((movie) => (
-          <Col>
+          <div className="movies-col">
             <CardMovie movie={movie} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
     </div>
   );
 }
