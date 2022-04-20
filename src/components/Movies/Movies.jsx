@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CardMovie from "../Card_Movie/CardMovie";
+import { Col, Row } from "react-bootstrap";
 
 function Movies() {
   const [movies, setMovies] = useState([]);
@@ -10,10 +11,9 @@ function Movies() {
     async function getMovies() {
       try {
         const { data } = await axios.get(
-          "https://api.themoviedb.org/3/movie/650?api_key=a6e95cd6f3f07fe03806493d08d2d958"
+          "https://api.themoviedb.org/3/discover/movie/?api_key=a6e95cd6f3f07fe03806493d08d2d958"
         );
-        setMovies(data);
-        console.log(data);
+        setMovies(data.results);
       } catch (error) {
         console.log(error);
       }
@@ -24,7 +24,13 @@ function Movies() {
   }, []);
   return (
     <div>
-      <CardMovie movie={movies} />
+      <Row>
+        {movies.map((movie) => (
+          <Col>
+            <CardMovie movie={movie} />
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }
