@@ -1,8 +1,7 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CardMovie from "../Card_Movie/CardMovie";
-import { Col, Row } from "react-bootstrap";
+import "./Movies.css";
 
 function Movies() {
   const [movies, setMovies] = useState([]);
