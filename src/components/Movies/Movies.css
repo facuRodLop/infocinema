@@ -1,0 +1,4 @@
+.swiper-button-prev,
+.swiper-button-next {
+  top: calc(169px / 2) !important;
+}

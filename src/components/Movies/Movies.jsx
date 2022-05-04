@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CardMovie from "../Card_Movie/CardMovie";
 import "./Movies.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 function Movies() {
   const [movies, setMovies] = useState([]);
@@ -23,13 +27,38 @@ function Movies() {
   }, []);
   return (
     <div>
-      <div className="movies-row">
+      <h2>Action</h2>
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={10}
+        slidesPerGroup={5}
+        loopFillGroupWithBlank={true}
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper"
+      >
         {movies.map((movie) => (
-          <div className="movies-col">
+          <SwiperSlide>
             <CardMovie movie={movie} />
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
+      <h2>Drama</h2>
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={10}
+        slidesPerGroup={5}
+        loopFillGroupWithBlank={true}
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper"
+      >
+        {movies.map((movie) => (
+          <SwiperSlide>
+            <CardMovie movie={movie} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
