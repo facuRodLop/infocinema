@@ -2,7 +2,14 @@
   text-decoration: none;
 }
 
-.movie-card {
+.movie-card-kind-of-movie {
+  min-width: 250px;
+  width: 300px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.movie-card-similar-movies {
   min-width: 250px;
   width: 300px;
   transition: 0.3s;
@@ -16,48 +23,72 @@
 
 .movie-card-title {
   color: var(--color-text-main);
+  width: 100%;
 }
 
-.movie-card-body {
+.movie-card-body-similar-movies {
   display: none;
   background-color: var(--color-main-dark-lighter);
   padding: 0.5rem 1rem;
   color: var(--color-text-main);
 }
 
-.movie-card-text {
+.movie-card-body-kind-of-movie {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  color: var(--color-text-main);
+  backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  border-radius: 3px;
+}
+
+.movie-card-similar-movies:hover .movie-card-body-similar-movies {
+  display: block;
+  position: fixed;
+  width: 100%;
+}
+
+.movie-card-kind-of-movie:hover .movie-card-body-kind-of-movie {
+  display: block;
+  transition: 0.2s;
+  background-color: var(--color-main-dark-light-ofive);
+}
+
+.movie-card-similar-movies:hover {
+  transform: scale(105%);
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.movie-card-similar-movies:hover .movie-card-image {
+  border-radius: 0;
+}
+
+.movie-card-similar-movies:hover .movie-card-image-container::after {
+  box-shadow: inset 0px -77px 34px -29px var(--color-main-dark-lighter);
+  content: "";
+  display: block;
+  height: 101%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.movie-card-text-similar-movies {
   width: 215px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.movie-card-text-kind-of-movie {
+  display: none;
+}
+
 .movie-card-release {
   color: var(--color-text-secondary);
-}
-
-.movie-card:hover .movie-card-body {
-  display: block;
-  position: fixed;
-  width: 100%;
-}
-
-.movie-card:hover {
-  transform: scale(105%);
-  transition: 0.2s;
-  z-index: 1;
-}
-
-.movie-card:hover .movie-card-image {
-  border-radius: 0;
-}
-
-.movie-card:hover .movie-card-image-container::after {
-  box-shadow: inset 0px -77px 34px -29px var(--color-main-dark-lighter);
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }

@@ -4,6 +4,7 @@
   --color-bg-togglesection: rgba(120, 128, 150, 0.5);
   --color-main-dark: rgb(19, 19, 19);
   --color-main-dark-lighter: rgb(30, 30, 30);
+  --color-main-dark-light-ofive: rgb(30, 30, 30, 0.5);
   --color-main-light: gray;
   --color-dark-bootstrap: rgba(var(--bs-dark-rgb));
 }
