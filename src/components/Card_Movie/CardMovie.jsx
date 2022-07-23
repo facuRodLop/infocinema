@@ -14,10 +14,12 @@ function CardMovie({ movie, type }) {
         </div>
         <div className={`movie-card-body-` + type}>
           <h3 className={`movie-card-title-` + type}>{movie.title}</h3>
-          <p className={`movie-card-text-` + type}>{movie.overview}</p>
-          <span className={`movie-card-release-` + type}>Release: {movie.release_date}</span>
-          <br />
-          <span className={`movie-card-rate-` + type}>Rate: {movie.vote_average}/10</span>
+          <div className={`movie-card-info-` + type}>
+            <p className={`movie-card-text-` + type}>{movie.overview}</p>
+            <span className={`movie-card-release-` + type}>Release: {movie.release_date}</span>
+            <br />
+            <span className={`movie-card-rate-` + type}>Rate: {movie.vote_average}/10</span>
+          </div>
         </div>
       </div>
     </Link>

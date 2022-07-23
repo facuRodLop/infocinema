@@ -28,9 +28,33 @@ function Movies() {
   return (
     <div>
       <h2>Action</h2>
-      {movies.map((movie) => (
-        <CardMovie movie={movie} type={"kind-of-movie"} />
-      ))}
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={5}
+        navigation={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+        }}
+        modules={[Navigation]}
+        className="mySwiper"
+      >
+        {movies.map((movie) => (
+          <SwiperSlide>
+            <CardMovie movie={movie} type={"kind-of-movie"} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <h2>Drama</h2>
     </div>
   );
